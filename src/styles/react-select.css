@@ -1,0 +1,51 @@
+.app-select-field__control {
+  box-shadow: none !important;
+}
+
+.app-select-field__value-container {
+}
+
+.app-select-field__placeholder {
+}
+
+.app-select-field__input-container {
+  text-transform: capitalize !important;
+}
+
+.app-select-field__input-container input {
+}
+
+.app-select-field__single-value {
+  text-transform: capitalize;
+}
+
+.app-select-field__indicators {
+}
+
+.app-select-field__indicator-separator {
+}
+
+.app-select-field__indicator {
+}
+
+.app-select-field__menu {
+}
+
+.app-select-field__menu-list {
+  @apply text-app-dark-primary;
+}
+
+.app-select-field__option {
+  text-transform: capitalize;
+}
+
+.app-select-field__option:hover {
+  @apply bg-app-gray-primary text-white;
+}
+
+.app-select-field__option--is-focused {
+}
+
+.app-select-field__option--is-selected {
+  background-color: #d90d1e !important;
+}

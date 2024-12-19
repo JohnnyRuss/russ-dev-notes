@@ -1,0 +1,300 @@
+/* Quill  */
+.quill {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.quill a,
+.quill a > * {
+  color: royalblue !important;
+  text-decoration: underline;
+}
+
+.quill,
+.quill p,
+.quill p > *:not(:is(a, span, pre, sup, sub, img)) {
+  color: #011f26 !important;
+  padding: 10px 0px !important;
+}
+
+.quill p sub,
+.quill p sup {
+  font-size: 75% !important;
+}
+
+.quill ul,
+.quill ul > * {
+  font-size: 18px !important;
+}
+
+.quill,
+.quill p,
+.quill p > * {
+  font-size: 18px !important;
+  text-align: justify !important;
+  hyphens: auto !important;
+  -webkit-hyphens: auto !important;
+  -moz-hyphens: auto !important;
+  -ms-hyphens: auto !important;
+}
+
+.quill,
+.quill p {
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.quill h1 {
+  font-size: 36px !important;
+}
+
+.quill h2 {
+  font-size: 30px !important;
+}
+
+.quill h3 {
+  font-size: 26px !important;
+}
+
+.quill h4 {
+  font-size: 22px !important;
+}
+
+.quill h1 {
+  display: inline-block;
+  padding: 20px 0 !important;
+}
+
+.quill h2,
+.quill h3,
+.quill h4 {
+  padding: 10px 0 !important;
+}
+
+.quill .ql-editor blockquote {
+  color: #fff;
+  background-color: #595959 !important;
+  border-left: 8px solid #011f26 !important;
+  width: max-content;
+  max-width: 100%;
+  display: block !important;
+  padding: 15px 20px;
+  letter-spacing: 0.7px;
+  padding-left: 0.5rem;
+  font-size: 16px;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.quill .ql-editor blockquote::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: -8px;
+  right: 0;
+  bottom: 0;
+  height: 6px;
+  background-color: #fff;
+}
+
+.quill .ql-editor blockquote::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: -8px;
+  right: 0;
+  top: 0;
+  height: 6px;
+  background-color: #fff;
+}
+
+.quill pre {
+  border: 2px solid #011f26;
+  padding: 20px !important;
+  border-radius: 5px;
+  overflow-x: auto !important;
+  position: relative;
+  font-size: 16px;
+  z-index: 1 !important;
+}
+
+.quill .copy-btn {
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(89, 89, 89, 0.7);
+  color: #fff;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ql-editor.ql-for-code > *:is(p, img, ul, iframe) {
+  display: none !important;
+}
+
+.quill iframe {
+  width: 75% !important;
+  max-height: 100% !important;
+  aspect-ratio: 16/9 !important;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 12px 3px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+}
+
+/* Quill ReadOnly */
+
+.quill .ql-container.ql-bubble .ql-editor img {
+  cursor: pointer;
+  pointer-events: all !important;
+}
+
+.quill .ql-container.ql-bubble .ql-editor .ql-clipboard,
+.quill .ql-container.ql-bubble .ql-editor .ql-tooltip {
+  display: none;
+}
+
+/* Quill Edit */
+.quill .ql-toolbar.ql-snow,
+.quill .ql-container.ql-snow {
+  box-shadow: 0px 3px 8px, rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  border-radius: 16px;
+}
+
+.quill .ql-container.ql-snow {
+  padding: 10px;
+}
+
+.quill .ql-container.ql-snow .ql-editor {
+  height: 55vh;
+  overflow-y: auto;
+}
+
+.quill .ql-container.ql-snow .ql-editor::-webkit-scrollbar,
+.ql-container.ql-bubble .ql-editor pre::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+.quill .ql-container.ql-snow .ql-editor::-webkit-scrollbar-thumb,
+.ql-container.ql-bubble .ql-editor pre::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  border-radius: 2rem;
+  @apply bg-app-dark-primary;
+}
+
+.quill .ql-container.ql-snow .ql-editor::-webkit-scrollbar-track,
+.ql-container.ql-bubble .ql-editor pre::-webkit-scrollbar-track {
+  border-radius: 2rem;
+  @apply bg-app-red-primary;
+}
+
+/* Quill Image */
+.quill p:has(img) {
+  width: max-content;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.4);
+  padding: 0 !important;
+  line-height: 1;
+  letter-spacing: 0px;
+}
+
+.quill .ql-snow p:has(img) {
+  width: max-content;
+  max-width: 80%;
+  height: max-content;
+  max-height: 400px;
+}
+
+.quill .ql-snow p:has(img) img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.quill p:has(img) img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin: 0;
+  border-radius: inherit;
+  cursor: pointer;
+}
+
+.quill p:has(img):has(:nth-child(2)) {
+  display: grid;
+  gap: 12px;
+  padding: 10px !important;
+}
+
+.quill p:has(img):has(:nth-child(2)) {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.quill p:has(img):has(:nth-child(3)) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.quill p:has(img):has(:nth-child(4)) {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 49%);
+  height: 62vh;
+}
+
+.quill .ql-snow p:has(img):has(:nth-child(4)) {
+  width: 80%;
+  height: 450px;
+}
+
+.quill p:has(img):has(:nth-child(5)) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.quill p:has(img):has(:nth-child(5)) img:nth-child(2) {
+  grid-column: 2;
+  grid-row: span 2;
+}
+
+.quill p:has(img):has(:nth-child(6)) {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.quill p:has(img):has(:nth-child(6)) img:nth-child(2) {
+  grid-column: 2;
+  grid-row: span 1;
+}
+
+.quill p:has(img):has(:nth-child(7)) {
+  position: relative;
+}
+
+.quill p:has(img):has(:nth-child(7))::after {
+  content: "+4";
+  position: absolute;
+  grid-column: 3;
+  grid-row: 2;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: inherit;
+  margin: 0px -10px -10px 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 32px;
+}

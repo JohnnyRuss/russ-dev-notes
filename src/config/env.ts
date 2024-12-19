@@ -1,0 +1,19 @@
+const env = import.meta.env;
+
+const NODE_MODE = env.VITE_ENV_MODE || "";
+
+const API_ORIGIN = env.VITE_API_ORIGIN || "";
+const API_ENDPOINT = env.VITE_API_ENDPOINT || "";
+
+const APP_ORIGIN = env.VITE_ORIGIN;
+const VITE_AUTH_ROUTE = env.VITE_AUTH_ROUTE;
+const VITE_ADMIN_USERNAME = env.VITE_ADMIN_USERNAME;
+
+export {
+  NODE_MODE,
+  API_ORIGIN,
+  API_ENDPOINT,
+  APP_ORIGIN,
+  VITE_AUTH_ROUTE,
+  VITE_ADMIN_USERNAME,
+};
