@@ -1,10 +1,11 @@
 import { logger } from "@/utils";
-import SelectionItem from "./SelectionItem";
 
 import { useLogoutQuery } from "@/hooks/api";
-import { Search } from "@/components/Layouts";
 import { useCheckIsAuthenticatedUser } from "@/hooks/auth";
 
+import SelectionItem from "./SelectionItem";
+import Footer from "@/components/Footer/Footer";
+import { Search } from "@/components/Layouts";
 import { Spinner } from "@/components/Layouts";
 
 const Home: React.FC = () => {
@@ -21,7 +22,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="bg-app-red-primary min-h-[100svh] relative flex flex-col items-center justify-center gap-12">
+    <div className="bg-app-red-primary min-h-[100svh] relative flex flex-col items-center justify-center gap-12 pt-5 xl:pt-0">
       <div className="w-full px-6 xl:w-[770px] xl:px-0">
         <Search />
       </div>
@@ -56,6 +57,8 @@ const Home: React.FC = () => {
       )}
 
       {loading && <Spinner />}
+
+      <Footer className="xl:fixed text-white bottom-0 w-full" />
     </div>
   );
 };
