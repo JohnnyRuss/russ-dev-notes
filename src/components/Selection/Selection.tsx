@@ -22,7 +22,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-app-red-primary min-h-[100svh] relative flex flex-col items-center justify-center gap-12">
-      <div className="w-[770px]">
+      <div className="w-full px-6 xl:w-[770px] xl:px-0">
         <Search />
       </div>
 

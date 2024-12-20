@@ -47,7 +47,7 @@ const Blog: React.FC = () => {
               </Link>
             </div>
 
-            <div className="w-full">
+            <div className="w-full pr-4 xl:pr-0">
               <Search />
             </div>
           </div>
