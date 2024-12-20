@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowTriangleLeft } from "@/components/Layouts/Icons";
 
-type ScrollTopButtonT = {};
-
-const ScrollTopButton: React.FC<ScrollTopButtonT> = () => {
+const ScrollTopButton: React.FC = () => {
   const [isScrolling, setIsScrolling] = useState(false);
 
   const onScrollTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -32,13 +30,13 @@ const ScrollTopButton: React.FC<ScrollTopButtonT> = () => {
   return (
     <button
       onClick={onScrollTop}
-      className={`scroll-top sticky ml-auto translate-x-[100px] bottom-4 bg-app-black-transparent size-14 rounded-full flex items-center justify-center text-3xl transition-all ${
+      className={`scroll-top fixed right-4 bottom-4 z-10 bg-app-black-transparent size-14 rounded-full flex items-center justify-center text-3xl transition-all ${
         isScrolling
           ? "opacity-100 scale-100 pointer-events-auto"
           : "opacity-0 scale-50 pointer-events-none"
       }`}
     >
-      <ArrowTriangleLeft className="rotate-90" />
+      <ArrowTriangleLeft className="rotate-90 text-white" />
     </button>
   );
 };

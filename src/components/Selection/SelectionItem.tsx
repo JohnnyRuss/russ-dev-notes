@@ -11,7 +11,7 @@ const SelectionItem: React.FC<SelectionItemT> = ({ title, logo, query }) => {
   return (
     <Link
       to={`${PATHS.blog_page}?category=${query}`}
-      className="size-[220px] bg-app-dark-primary text-white p-10 rounded-lg shadow-2xl"
+      className="size-[190px] sm:size-[220px] bg-app-dark-primary text-white p-10 rounded-lg shadow-2xl"
     >
       <figure className="w-full h-full flex flex-col justify-center items-center gap-7">
         <div className="size-[80%] min-h-[80%] flex items-center justify-center">

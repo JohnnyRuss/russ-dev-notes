@@ -5,7 +5,7 @@ type FooterT = {
 const Footer: React.FC<FooterT> = ({ className }) => {
   return (
     <footer
-      className={`pt-4 sm:pt-12 pb-4 px-2 md:px-12 text-gray-tint text-sm flex items-center justify-between gap-2 ${className}`}
+      className={`py-2 sm:pt-12 px-2 md:px-12 text-gray-tint text-xs  sm:text-sm flex items-center justify-between gap-2 ${className}`}
     >
       <p className="flex items-center">
         <span className="text-2xl">&copy;</span>

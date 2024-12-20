@@ -70,7 +70,7 @@ const Search: React.FC = () => {
             <div className="h-full overflow-y-auto scrollbar">
               <ResultsHead resultCount={data.length} />
 
-              <div className="flex flex-col items-start gap-4 mt-4">
+              <div className="flex flex-col items-start gap-4 mt-2 sm:mt-4">
                 {data.length > 0 ? (
                   data.map((article) => (
                     <ResultItem key={article._id} article={article} />

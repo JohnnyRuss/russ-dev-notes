@@ -27,7 +27,7 @@ const Home: React.FC = () => {
         <Search />
       </div>
 
-      <div className="flex flex-col xl:flex-row items-center justify-center gap-6 xl:gap-12">
+      <div className="flex flex-col xl:flex-row items-center justify-center gap-3 sm:gap-6 xl:gap-12">
         <SelectionItem
           title="Javascript"
           logo="/assets/js.webp"

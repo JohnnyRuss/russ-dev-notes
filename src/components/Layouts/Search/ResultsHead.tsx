@@ -4,7 +4,7 @@ type ResultsHeadT = {
 
 const ResultsHead: React.FC<ResultsHeadT> = ({ resultCount }) => {
   return (
-    <h4 className="text-xl font-bold">
+    <h4 className="text-lg sm:text-xl font-bold">
       <span>Search Results</span>
       &nbsp;
       {resultCount > 0 && <span>({resultCount})</span>}

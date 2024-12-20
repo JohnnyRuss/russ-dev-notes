@@ -24,7 +24,7 @@ const SideBarTree: React.FC = () => {
     >
       <button
         onClick={toggleNavBar}
-        className="h-14 w-7 rounded-full rounded-l-none absolute right-0 translate-x-full bg-white text-app-dark-primary border border-app-dark-primary flex items-center justify-center leading-none text-2xl after:absolute after:bg-white after:left-0 after:bottom-0 after:top-0 after:w-1 after:-translate-x-[2px] after:z-50 xl:hidden"
+        className="h-14 w-7 z-[999] rounded-full rounded-l-none absolute right-0 translate-x-full bg-white text-app-dark-primary border border-app-dark-primary flex items-center justify-center leading-none text-2xl after:absolute after:bg-white after:left-0 after:bottom-0 after:top-0 after:w-1 after:-translate-x-[2px] after:z-50 xl:hidden"
       >
         <ArrowTriangleRight
           className={`transition-transform ${

@@ -41,7 +41,7 @@ const Blog: React.FC = () => {
 
               <Link
                 to={PATHS.selection_page}
-                className="text text-5xl text-app-dark-primary"
+                className="text text-4xl sm:text-5xl text-app-dark-primary"
               >
                 <Home />
               </Link>

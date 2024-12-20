@@ -15,9 +15,9 @@ const ArticleTitleAndCategories: React.FC<ArticleTitleAndCategoriesT> = ({
 }) => {
   return (
     <div className="text-app-dark-primary">
-      <h1 className="text-4xl font-semibold">{title}</h1>
+      <h1 className="text-2xl sm:text-4xl font-semibold">{title}</h1>
 
-      <div className="flex items-center gap-6 capitalize mt-3">
+      <div className="flex items-center gap-6 capitalize mt-3 text-sm sm:text-base">
         <div>
           <span>
             <strong>Category:</strong>
