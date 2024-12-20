@@ -2,13 +2,13 @@ import { logger } from "@/utils";
 import SelectionItem from "./SelectionItem";
 
 import { useLogoutQuery } from "@/hooks/api";
+import { Search } from "@/components/Layouts";
 import { useCheckIsAuthenticatedUser } from "@/hooks/auth";
 
 import { Spinner } from "@/components/Layouts";
 
 const Home: React.FC = () => {
   const { isAuthenticated, check } = useCheckIsAuthenticatedUser(true);
-
   const { errorMessage, loading, signOut } = useLogoutQuery();
 
   const onLogout = async () => {
@@ -22,6 +22,10 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-app-red-primary min-h-[100svh] relative flex flex-col items-center justify-center gap-12">
+      <div className="w-[770px]">
+        <Search />
+      </div>
+
       <div className="flex flex-col xl:flex-row items-center justify-center gap-6 xl:gap-12">
         <SelectionItem
           title="Javascript"

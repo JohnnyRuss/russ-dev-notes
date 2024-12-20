@@ -6,6 +6,7 @@ import { useCheckIsAuthenticatedUser } from "@/hooks/auth";
 
 import Article from "@/components/Article/Article";
 import { Plus, Home } from "@/components/Layouts/Icons";
+import { Search } from "@/components/Layouts";
 import SideBarTree from "@/components/SideBarTree/SideBarTree";
 
 const Blog: React.FC = () => {
@@ -22,23 +23,33 @@ const Blog: React.FC = () => {
 
       <div className="w-full xl:mx-8 pt-4 pb-8 flex flex-col gap-8">
         {!articleId && (
-          <div className="flex items-center gap-4 xl:gap-8 pl-9 pr-1 xl:px-0">
-            {isAuthenticated && (
-              <Link
-                to={PATHS.create_page}
-                className="w-full bg-app-dark-primary py-3 xl:py-4 rounded-lg text-center font-semibold text-xl flex items-center justify-center gap-4"
-              >
-                <Plus />
-                <span>Add Article</span>
-              </Link>
-            )}
+          <div
+            className={`flex ${
+              isAuthenticated ? "flex-col" : "flex-row items-center"
+            } gap-4`}
+          >
+            <div className="flex items-center gap-4 xl:gap-8 pl-9 pr-1 xl:px-0">
+              {isAuthenticated && (
+                <Link
+                  to={PATHS.create_page}
+                  className="w-full bg-app-dark-primary py-3 xl:py-4 rounded-lg text-center font-semibold text-xl flex items-center justify-center gap-4"
+                >
+                  <Plus />
+                  <span>Add Article</span>
+                </Link>
+              )}
 
-            <Link
-              to={PATHS.selection_page}
-              className="text text-5xl text-app-dark-primary"
-            >
-              <Home />
-            </Link>
+              <Link
+                to={PATHS.selection_page}
+                className="text text-5xl text-app-dark-primary"
+              >
+                <Home />
+              </Link>
+            </div>
+
+            <div className="w-full">
+              <Search />
+            </div>
           </div>
         )}
 
@@ -47,7 +58,7 @@ const Blog: React.FC = () => {
             <Article />
           </div>
         ) : (
-          <figure className="w-full min-h-[85svh] h-full flex justify-center items-center">
+          <figure className="w-full h-[75svh] flex justify-center items-center">
             <img
               src="/assets/blog.jpg"
               alt=""

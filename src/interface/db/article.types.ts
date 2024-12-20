@@ -43,4 +43,14 @@ export type SelectionTreeItemT = {
   }>;
 };
 
+export type SearchArticleT = {
+  _id: string;
+  slug: string;
+  title: string;
+  category: CategoryT;
+  topic: TopicT;
+};
+
+export type SearchArticleResponseT = Array<SearchArticleT>;
+
 export type SelectionTreeT = Array<SelectionTreeItemT>;

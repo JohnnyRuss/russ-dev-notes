@@ -19,6 +19,9 @@ import { FaCode } from "react-icons/fa";
 // pi
 import { PiArticleNyTimesLight } from "react-icons/pi";
 
+// lu
+import { LuSearch } from "react-icons/lu";
+
 // A
 const ArrowTriangleRight = IoIosArrowForward;
 const ArrowTriangleLeft = IoIosArrowBack;
@@ -36,8 +39,11 @@ const Delete = MdDelete;
 const EyeOpen = VscEye;
 const EyeClose = VscEyeClosed;
 
-//P
+// P
 const Plus = FaPlus;
+
+// S
+const Search = LuSearch;
 
 // U
 const Update = GrUpdate;
@@ -58,4 +64,5 @@ export {
   Update,
   Delete,
   Home,
+  Search,
 };

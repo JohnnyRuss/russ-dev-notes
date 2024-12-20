@@ -7,3 +7,4 @@ export { default as useGetTreeSelectionQuery } from "./useGetTreeSelectionQuery"
 export { default as useSignInQuery } from "./useSignInQuery";
 export { default as useLogoutQuery } from "./useLogoutQuery";
 export { default as useDeleteArticleQuery } from "./useDeleteArticleQuery";
+export { default as useSearchArticlesQuery } from "./useSearchArticlesQuery";

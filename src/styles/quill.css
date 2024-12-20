@@ -180,22 +180,23 @@
   overflow-y: auto;
 }
 
-.quill .ql-container.ql-snow .ql-editor::-webkit-scrollbar,
-.ql-container.ql-bubble .ql-editor pre::-webkit-scrollbar {
-  width: 0.8rem;
+.quill .ql-container .ql-editor::-webkit-scrollbar,
+.quill .ql-editor pre::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-.quill .ql-container.ql-snow .ql-editor::-webkit-scrollbar-thumb,
-.ql-container.ql-bubble .ql-editor pre::-webkit-scrollbar-thumb {
+.quill .ql-editor::-webkit-scrollbar-thumb,
+.quill .ql-editor pre::-webkit-scrollbar-thumb {
   cursor: pointer;
-  border-radius: 2rem;
+  border-radius: 20px;
   @apply bg-app-dark-primary;
 }
 
-.quill .ql-container.ql-snow .ql-editor::-webkit-scrollbar-track,
-.ql-container.ql-bubble .ql-editor pre::-webkit-scrollbar-track {
-  border-radius: 2rem;
-  @apply bg-app-red-primary;
+.quill .ql-container .ql-editor::-webkit-scrollbar-track,
+.quill .ql-editor pre::-webkit-scrollbar-track {
+  border-radius: 20px;
+  @apply bg-app-gray-primary;
 }
 
 /* Quill Image */
