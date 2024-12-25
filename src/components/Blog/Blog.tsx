@@ -58,9 +58,9 @@ const Blog: React.FC = () => {
             <Article />
           </div>
         ) : (
-          <figure className="w-full h-[75svh] flex justify-center items-center">
+          <figure className="w-[85%] mx-auto h-[75svh] flex justify-center items-center">
             <img
-              src="/assets/blog.jpg"
+              src="/assets/blog.webp"
               alt=""
               className="object-contain w-full xl:w-1/2"
             />

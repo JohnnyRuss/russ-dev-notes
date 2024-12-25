@@ -7,11 +7,14 @@ import "@/styles/rc-tree.css";
 import "@/styles/react-select.css";
 import App from "./App.tsx";
 import RCTreeProvider from "./providers/RCTreeProvider.tsx";
+import ServerHealthProvider from "./providers/ServerHealthProvider.tsx";
 
 createRoot(document.getElementById("root") as HTMLDivElement).render(
   <Router>
-    <RCTreeProvider>
-      <App />
-    </RCTreeProvider>
+    <ServerHealthProvider>
+      <RCTreeProvider>
+        <App />
+      </RCTreeProvider>
+    </ServerHealthProvider>
   </Router>
 );
