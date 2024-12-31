@@ -3,17 +3,13 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import "rc-tree/assets/index.css";
 import { useRCTreeContext } from "@/providers";
-import { useSearchParams } from "@/hooks/utils";
+import { useToggleSideBarNavTree } from "@/hooks/utils";
 import ToggleButton from "./ToggleButton";
 
 const SideBarTree: React.FC = () => {
   const { expandedKeys, loading, onSelect, tree, treeRef } = useRCTreeContext();
 
-  const { getParam, removeParam, setParam } = useSearchParams();
-  const navIsToggled = getParam("nav") === "1";
-
-  const toggleNavBar = () =>
-    navIsToggled ? removeParam("nav") : setParam("nav", "1");
+  const { navIsToggled, toggleNavBar } = useToggleSideBarNavTree();
 
   return (
     <>

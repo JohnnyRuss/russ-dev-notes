@@ -4,10 +4,13 @@ import { PATHS } from "@/config/paths";
 import { useCheckIsAuthenticatedUser } from "@/hooks/auth";
 
 import { Search } from "@/components/Layouts";
-import { Plus, Home } from "@/components/Layouts/Icons";
+import { Plus, Home, Burger } from "@/components/Layouts/Icons";
+import { useToggleSideBarNavTree } from "@/hooks/utils";
 
 const BlogHeader: React.FC = () => {
   const { isAuthenticated } = useCheckIsAuthenticatedUser(true);
+
+  const { toggleNavBar } = useToggleSideBarNavTree();
 
   return (
     <div
@@ -15,7 +18,14 @@ const BlogHeader: React.FC = () => {
         isAuthenticated ? "flex-col" : "flex-row items-center"
       } gap-4`}
     >
-      <div className="flex items-center gap-4 xl:gap-8 pl-9 pr-1 xl:px-0">
+      <div className="flex items-center gap-4 xl:gap-8 px-2 xl:px-0">
+        <button
+          onClick={toggleNavBar}
+          className="text-app-dark-primary text-3xl"
+        >
+          <Burger />
+        </button>
+
         {isAuthenticated && (
           <Link
             to={PATHS.create_page}
@@ -34,7 +44,7 @@ const BlogHeader: React.FC = () => {
         </Link>
       </div>
 
-      <div className="w-full pr-4 xl:pr-0">
+      <div className="w-full px-2 xl:px-0">
         <Search />
       </div>
     </div>

@@ -52,7 +52,7 @@ const Search: React.FC = () => {
           value={search}
           onFocus={onFocus}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full outline-none placeholder:italic placeholder:tracking-wider"
+          className="w-full bg-transparent outline-none placeholder:italic placeholder:tracking-wider"
           placeholder="Search For Articles..."
         />
         <label

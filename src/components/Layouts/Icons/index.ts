@@ -22,10 +22,16 @@ import { PiArticleNyTimesLight } from "react-icons/pi";
 // lu
 import { LuSearch } from "react-icons/lu";
 
+// ci
+import { CiMenuBurger } from "react-icons/ci";
+
 // A
 const ArrowTriangleRight = IoIosArrowForward;
 const ArrowTriangleLeft = IoIosArrowBack;
 const Article = PiArticleNyTimesLight;
+
+// B
+const Burger = CiMenuBurger;
 
 // C
 const Close = MdClose;
@@ -65,4 +71,5 @@ export {
   Delete,
   Home,
   Search,
+  Burger,
 };
