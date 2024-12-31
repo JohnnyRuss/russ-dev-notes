@@ -44,11 +44,15 @@ const PublishModal: React.FC<PublishModalT> = ({
 
   const topicsOptions = useMemo(
     () =>
-      topics.map((topic) => ({
-        label: topic.title,
-        value: topic._id,
-      })),
-    [topics]
+      topics
+        .filter((topic) =>
+          categoryValue ? topic.category === categoryValue.value : false
+        )
+        .map((topic) => ({
+          label: topic.title,
+          value: topic._id,
+        })),
+    [topics, categoryValue]
   );
 
   return showPublishModal ? (
@@ -69,13 +73,15 @@ const PublishModal: React.FC<PublishModalT> = ({
             onChange={onCategoryChange}
           />
 
-          <SelectField
-            label="Topics"
-            options={topicsOptions}
-            placeholder="Select Topic..."
-            value={topicValue}
-            onChange={onTopicChange}
-          />
+          {categoryValue && (
+            <SelectField
+              label="Topics"
+              options={topicsOptions}
+              placeholder="Select Topic..."
+              value={topicValue}
+              onChange={onTopicChange}
+            />
+          )}
 
           <button
             onClick={onClose}
