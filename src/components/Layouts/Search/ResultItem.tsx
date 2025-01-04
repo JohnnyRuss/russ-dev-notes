@@ -9,7 +9,7 @@ const ResultItem: React.FC<ResultItemT> = ({ article }) => {
   return (
     <Link
       to={`/blog?category=${article.category.query}&topic=${article.topic.query}&article=${article.slug}`}
-      className="flex flex-col gap-1 border-b border-b-app-gray-primary pb-4 last:border-none"
+      className="w-full flex flex-col gap-1 border-b border-b-app-gray-primary pb-4 last:border-none"
     >
       <h1 className="text-base sm:text-lg font-bold">{article.title}</h1>
 

@@ -25,5 +25,6 @@ body::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-track,
 .scrollbar::-webkit-scrollbar-track {
   border-radius: 2rem;
-  @apply bg-app-gray-primary;
+  /* @apply bg-app-gray-primary; */
+  background-color: #adb5bd;
 }
