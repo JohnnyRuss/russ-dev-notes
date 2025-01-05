@@ -49,7 +49,7 @@ const Search: React.FC = () => {
         setSearch={setSearch}
         setOpenSearch={setOpenSearch}
       />
-      ;
+
       {openSearch && (
         <>
           <div className="fixed inset-0" onClick={() => setOpenSearch(false)} />

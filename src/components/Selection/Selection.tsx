@@ -27,18 +27,26 @@ const Home: React.FC = () => {
         <Search />
       </div>
 
-      <div className="flex flex-col xl:flex-row items-center justify-center gap-3 sm:gap-6 xl:gap-12">
+      <div className="grid grid-cols-2 xl:grid-cols-4 gap-3 sm:gap-6 xl:gap-12">
         <SelectionItem
           title="Javascript"
           logo="/assets/js.webp"
           query="javascript"
         />
+
         <SelectionItem
           title="ReactJS"
           logo="/assets/react.webp"
           query="react"
         />
-        <SelectionItem title="NodeJS" logo="/assets/node.webp" query="node" />
+
+        <SelectionItem title="NodeJS" logo="/assets/node.webp" query="nodejs" />
+
+        <SelectionItem
+          title="Styling"
+          logo="/assets/css.webp"
+          query="styling"
+        />
       </div>
 
       {errorMessage && (
